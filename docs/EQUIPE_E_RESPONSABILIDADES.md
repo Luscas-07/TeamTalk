@@ -2,18 +2,22 @@
 
 **Projeto:** TeamTalk — Avaliação A3  
 **Sprint:** 0 (organização inicial)  
-**Situação:** divisão definida pela equipe; nomes de usuário dos colegas ainda não informados.
+**Situação:** divisão informada pelo líder; username do analista identificado e os demais a confirmar.
 
 ## Papéis
 
 | Papel | Responsável | Responsabilidades principais |
 | --- | --- | --- |
-| 1. Líder técnico / organização | Líder do projeto (GitHub: `Luscas-07`) | Arquitetura, GitHub Projects, revisão e integração do código |
-| 2. Analista de requisitos | Colega 1 | Levantamento de requisitos, regras de negócio e documentação |
-| 3. UI/UX Designer | Colega 2 | Protótipos, identidade visual e responsividade |
-| 4. Desenvolvedor Frontend | Colega 3 | Next.js, TypeScript, telas e componentes |
-| 5. Desenvolvedor Backend/BaaS | Colega 4 | Supabase, autenticação, banco de dados e permissões |
-| 6. QA e DevOps | Colega 5 | Testes, Vercel, PWA, deploy e documentação da entrega |
+| 1. Líder técnico / organização | Líder do projeto (`Luscas-07`) | Arquitetura, GitHub Projects, revisão e integração do código |
+| 2. Analista de requisitos | `arthurfonsecadocarmo` | Levantamento de requisitos, regras de negócio e documentação |
+| 3. UI/UX Designer | Líder do projeto (`Luscas-07`) | Protótipos, identidade visual e responsividade |
+| 4. Desenvolvedor Frontend | Felipe (username GitHub a confirmar) | Next.js, TypeScript, telas e componentes |
+| 5. Desenvolvedor Backend/BaaS | Arthur Dos Santos Alves (username GitHub a confirmar) | Supabase, autenticação, banco de dados e permissões |
+| 6. QA e DevOps | Breno Oliveira (username GitHub a confirmar) | Testes, Vercel, PWA, deploy e documentação da entrega |
+
+**Conferência da equipe:** são seis funções exercidas por **cinco pessoas identificadas** (o líder acumula liderança técnica e UI/UX). O PDF da avaliação prevê equipe de 6 a 7 alunos; confirmar se há um sexto integrante a registrar.
+
+**Papel de Product Owner (PO):** ainda não atribuído explicitamente. Pode ser combinado com análise de requisitos mediante validação da equipe; não presumir a atribuição.
 
 ## Princípio de trabalho da equipe
 
@@ -30,7 +34,10 @@ Cada integrante possui uma **área de responsabilidade principal**, mas todos po
 
 ## Próximas confirmações
 
-- [ ] Informar os usernames GitHub dos cinco colegas.
+- [x] Identificar o username GitHub do analista de requisitos (`arthurfonsecadocarmo`).
+- [ ] Informar e conferir os usernames GitHub de Felipe, Arthur Dos Santos Alves e Breno Oliveira.
+- [ ] Confirmar o sexto integrante, se exigido pelo professor (são cinco pessoas até agora).
+- [ ] Definir explicitamente quem atuará como Product Owner (PO), se exigido.
 - [ ] Validar a lista de responsáveis com a equipe.
 - [ ] Organizar o GitHub Projects com as Sprints 0, 1 e 2.
 - [ ] Atribuir responsáveis principais por Issue.
