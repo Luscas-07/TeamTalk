@@ -12,10 +12,10 @@
 | 4 | Rafael — UI/UX (GitHub a confirmar) | [#8](https://github.com/Luscas-07/TeamTalk/issues/8), protótipos e fluxos (quando entregues) | Experiência de uso em celulares, identidade visual, decisões de navegação e acessibilidade |
 | 5 | Felipe `braga-felipee` | [#6](https://github.com/Luscas-07/TeamTalk/issues/6), [#12](https://github.com/Luscas-07/TeamTalk/issues/12), [#16](https://github.com/Luscas-07/TeamTalk/issues/16) e PRs | Next.js, componentes, responsividade e telas realmente implementadas |
 | 6 | Arthur dos Santos `alvessarthur` | [#7](https://github.com/Luscas-07/TeamTalk/issues/7), [#10](https://github.com/Luscas-07/TeamTalk/issues/10), [#11](https://github.com/Luscas-07/TeamTalk/issues/11), [#14](https://github.com/Luscas-07/TeamTalk/issues/14), [#15](https://github.com/Luscas-07/TeamTalk/issues/15) | Banco, Auth, RLS, Realtime e testes reais de isolamento |
-| 7 | Responsável técnico por QA/testes **a definir** + equipe | [#5](https://github.com/Luscas-07/TeamTalk/issues/5), [#13](https://github.com/Luscas-07/TeamTalk/issues/13), [#17](https://github.com/Luscas-07/TeamTalk/issues/17), CI e evidências | Testes, PWA, qualidade, Pull Requests e demonstração das Sprints 1 e 2 |
+| 7 | QA/DevOps compartilhado — Felipe, Arthur dos Santos, Tech Lead e demais integrantes | [#5](https://github.com/Luscas-07/TeamTalk/issues/5), [#13](https://github.com/Luscas-07/TeamTalk/issues/13), [#17](https://github.com/Luscas-07/TeamTalk/issues/17), CI e evidências | Cada participante mostra testes reais da própria função, revisão cruzada e resultados; Breno valida aceite como PO |
 | 8 | Todos | Quadro Kanban e app publicado (somente quando funcional e testado) | Cada integrante relata sua contribuição, um desafio real e o que aprendeu usando IA e trabalhando em equipe |
 
-**Equipe:** sete integrantes. Julia e Rafael já participam das responsabilidades humanas, mas seus usernames GitHub ainda não foram informados. **QA/DevOps não está formalmente atribuído**; decidir o responsável e o apresentador dessa parte antes da apresentação.
+**Equipe:** sete integrantes. Julia e Rafael já participam das responsabilidades humanas, mas seus usernames GitHub ainda não foram informados. **QA/DevOps foi definido como responsabilidade transversal**: cada integrante explica a qualidade/testes da sua entrega e outro colega valida. Felipe e Arthur dos Santos estão atribuídos às Issues #13 e #17 para consolidação técnica; o PO dá aceite.
 
 ## O que cada integrante precisa registrar ao longo do projeto?
 
@@ -62,6 +62,7 @@
 - [ ] Cada apresentador ensaiou sua parte, comprovando sua contribuição individual.
 - [ ] Links testados, internet disponível e alternativa de captura/registro caso algum serviço fique fora.
 - [ ] Confirmar usernames GitHub de Julia e Rafael e vincular suas evidências reais.
-- [ ] Definir QA/DevOps e quem apresentará os testes.
+- [x] Definir QA/DevOps compartilhado: cada integrante apresenta os testes e evidências do que realizou.
+- [ ] Demonstrar uma revisão/teste cruzado real por funcionalidade, sem inventar resultados.
 
 **Nota:** atualmente o material serve como preparação. Não use itens ainda pendentes para reivindicar entregas concluídas.
