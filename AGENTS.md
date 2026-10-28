@@ -35,17 +35,19 @@
 9. **GitHub Projects:** usar o quadro quando disponível. Não afirmar que a Issue foi adicionada ao quadro sem confirmar que essa operação realmente ocorreu. Se a integração não puder editar Projects, registrar bloqueio e pedir intervenção humana.
 10. **Não representar implementação fictícia:** testes, commits, CI e deploys devem ser verificáveis por links/saídas reais. Não simular que uma IA executou ações que sua integração não permite.
 
-## 4. Responsáveis e distribuição inicial
+## 4. Responsáveis — divisão oficial de 28/10/2026
 
-| Função | GitHub | Issues principais |
+| Função | Conta/Integrante | Issues principais |
 | --- | --- | --- |
-| Líder técnico e UI/UX | [@Luscas-07](https://github.com/Luscas-07) | #2, #3, #8 |
-| Requisitos e UML | [@arthurfonsecadocarmo](https://github.com/arthurfonsecadocarmo) | #1, #4 |
-| Frontend | [@braga-felipee](https://github.com/braga-felipee) | #6, #12, #16 |
-| Backend/BaaS | [@alvessarthur](https://github.com/alvessarthur) | #7, #10, #11, #14, #15 |
-| QA e DevOps | [@BrennoOliveiraS](https://github.com/BrennoOliveiraS) | #5, #9, #13, #17 |
+| Tech Lead / Líder técnico | [@Luscas-07](https://github.com/Luscas-07) | #2, #3, #5 (coordenação de CI) |
+| Product Owner (PO) | Breno [@BrennoOliveiraS](https://github.com/BrennoOliveiraS) | #19; prioridades, escopo, aceite nas demais |
+| Frontend | Felipe [@braga-felipee](https://github.com/braga-felipee) | #6, #12, #16 |
+| Backend / Banco | Arthur dos Santos [@alvessarthur](https://github.com/alvessarthur) | #7, #10, #11, #14, #15 |
+| Requisitos e UML | Arthur Fonseca [@arthurfonsecadocarmo](https://github.com/arthurfonsecadocarmo) **e Julia (username pendente)** | #1, #4, #9 |
+| UX/UI | Rafael (**username pendente**) | #8 |
+| QA e testes | **A definir pela equipe** | #13, #17 (sem assignee até designação) |
 
-**Equipe:** há cinco contas identificadas até agora; a sexta pessoa aguarda convite. **Product Owner (PO):** papel ainda pendente de atribuição formal. Não atribuir tarefas à pessoa futura nem presumir quem será o PO.
+**Equipe:** sete pessoas. Não atribuir Julia ou Rafael no GitHub por nome presumido. O PO não substitui o papel de QA/DevOps; todos podem colaborar sem apagar responsabilidades. O GitHub Projects foi criado pelo líder com 17 Issues; a inclusão posterior da Issue #19 precisa ser verificada.
 
 ## 5. Sprints e definição de pronto
 
