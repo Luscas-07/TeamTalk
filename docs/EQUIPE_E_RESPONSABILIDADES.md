@@ -1,49 +1,57 @@
 # TeamTalk — Equipe e responsabilidades
 
 **Projeto:** TeamTalk — Avaliação A3  
-**Sprint:** 0 (organização inicial)  
-**Situação:** equipe identificada no GitHub; permissões de escrita conferidas para todos os integrantes listados.
+**Sprint:** 0 — organização e atualização de funções (28/10/2026)  
+**Situação:** sete integrantes identificados por nome; usuários GitHub de Julia e Rafael pendentes.
 
-## Papéis
+## Papéis definidos pela equipe
 
-| Papel | Responsável | Responsabilidades principais |
-| --- | --- | --- |
-| 1. Líder técnico / organização | Líder do projeto (`Luscas-07`) | Arquitetura, GitHub Projects, revisão e integração do código |
-| 2. Analista de requisitos | `arthurfonsecadocarmo` | Levantamento de requisitos, regras de negócio e documentação |
-| 3. UI/UX Designer | Líder do projeto (`Luscas-07`) | Protótipos, identidade visual e responsividade |
-| 4. Desenvolvedor Frontend | Felipe Costa Braga (`braga-felipee`) | Next.js, TypeScript, telas e componentes |
-| 5. Desenvolvedor Backend/BaaS | Arthur Dos Santos Alves (`alvessarthur`) | Supabase, autenticação, banco de dados e permissões |
-| 6. QA e DevOps | Breno Oliveira (`BrennoOliveiraS`) | Testes, Vercel, PWA, deploy e documentação da entrega |
+| Função | Integrante | Conta GitHub | Responsabilidades principais |
+| --- | --- | --- | --- |
+| Tech Lead / Liderança técnica | Líder do projeto | [@Luscas-07](https://github.com/Luscas-07) | Arquitetura, revisão e integração do código, GitHub Projects e coordenação técnica |
+| Product Owner (PO) | Breno Oliveira | [@BrennoOliveiraS](https://github.com/BrennoOliveiraS) | Visão do produto, priorização do backlog, escopo MVP, critérios de aceite e demonstrações de sprint |
+| Desenvolvedor Frontend | Felipe Costa Braga | [@braga-felipee](https://github.com/braga-felipee) | Next.js, TypeScript, telas e componentes |
+| Desenvolvedor Backend / Banco de Dados | Arthur dos Santos Alves | [@alvessarthur](https://github.com/alvessarthur) | Supabase, Auth, PostgreSQL, Realtime, RLS e segurança |
+| Requisitos e UML | Arthur Fonseca | [@arthurfonsecadocarmo](https://github.com/arthurfonsecadocarmo) | Levantamento de requisitos, regras de negócio, documentação e UML |
+| Requisitos e UML | Julia | **Username a confirmar** | Requisitos, regras de negócio, documentação e UML, em colaboração com Arthur Fonseca |
+| UI/UX Designer | Rafael | **Username a confirmar** | Protótipos, identidade visual, fluxos mobile-first e responsividade |
 
-**Conferência da equipe:** são seis funções exercidas por **cinco pessoas identificadas** (o líder acumula liderança técnica e UI/UX). O PDF da avaliação prevê equipe de 6 a 7 alunos; confirmar se há um sexto integrante a registrar.
+**Nota:** não atribuir tarefas a Julia ou Rafael no GitHub até confirmar as contas e o acesso ao repositório. Sua participação humana já está definida.
 
-**Papel de Product Owner (PO):** ainda não atribuído explicitamente. Pode ser combinado com análise de requisitos mediante validação da equipe; não presumir a atribuição.
+## Acordo de colaboração
 
-## Princípio de trabalho da equipe
+Cada integrante é responsável pela sua função principal, mas todos poderão ajudar os outros conforme a necessidade. O PO decide a ordem/valor das funcionalidades; o Tech Lead coordena as decisões técnicas; Requisitos e UX detalham experiências e regras; Frontend e Backend desenvolvem. Toda entrega deve ter evidência real.
 
-Cada integrante possui uma **área de responsabilidade principal**, mas todos podem auxiliar nas demais atividades conforme necessário. A responsabilidade principal não significa exclusividade de atuação.
+**Responsável por QA/DevOps:** não foi nomeado na nova distribuição. As atividades de testes, PWA e evidências de QA **continuam necessárias**, mas [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17) estão temporariamente sem assignee. O Tech Lead está coordenando a [#5](https://github.com/Luscas-07/TeamTalk/issues/5) (branches/CI). Isto não equivale a designar o PO como QA.
 
-## Processo de colaboração proposto para a Sprint 0
+## Backlog atualizado
 
-1. Planejar as atividades em Issues com critérios de aceitação, sprint e prioridade.
-2. Atribuir as Issues aos GitHub usernames reais somente após confirmar as contas dos integrantes.
-3. Desenvolver alterações em branches de trabalho, preservando a `main`.
-4. Revisar Pull Requests e realizar testes antes de integrar alterações.
-5. Registrar evidências de participação por Issues, comentários, commits e revisões.
-6. Manter os documentos de requisitos e UML versionados no repositório.
+- **Tech Lead:** [#2](https://github.com/Luscas-07/TeamTalk/issues/2), [#3](https://github.com/Luscas-07/TeamTalk/issues/3), [#5](https://github.com/Luscas-07/TeamTalk/issues/5) (coordenação de CI).
+- **PO Breno:** [#19](https://github.com/Luscas-07/TeamTalk/issues/19), mais priorização e aceite transversal às Sprints 0, 1 e 2.
+- **Arthur Fonseca e Julia:** [#1](https://github.com/Luscas-07/TeamTalk/issues/1), [#4](https://github.com/Luscas-07/TeamTalk/issues/4) e [#9](https://github.com/Luscas-07/TeamTalk/issues/9) (somente Arthur atribuído enquanto Julia não tem username).
+- **Rafael:** [#8](https://github.com/Luscas-07/TeamTalk/issues/8) (atribuição GitHub pendente de username).
+- **Felipe:** [#6](https://github.com/Luscas-07/TeamTalk/issues/6), [#12](https://github.com/Luscas-07/TeamTalk/issues/12), [#16](https://github.com/Luscas-07/TeamTalk/issues/16).
+- **Arthur dos Santos:** [#7](https://github.com/Luscas-07/TeamTalk/issues/7), [#10](https://github.com/Luscas-07/TeamTalk/issues/10), [#11](https://github.com/Luscas-07/TeamTalk/issues/11), [#14](https://github.com/Luscas-07/TeamTalk/issues/14), [#15](https://github.com/Luscas-07/TeamTalk/issues/15).
+- **QA/DevOps:** [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17) — **responsável a definir**.
 
-## Próximas confirmações
+## Padrão de trabalho
 
-- [x] Identificar o username GitHub do analista de requisitos (`arthurfonsecadocarmo`).
-- [x] Identificar e conferir os usernames GitHub de Felipe (`braga-felipee`), Arthur Dos Santos Alves (`alvessarthur`) e Breno Oliveira (`BrennoOliveiraS`).
-- [ ] Confirmar o sexto integrante, se exigido pelo professor (são cinco pessoas até agora).
-- [ ] Definir explicitamente quem atuará como Product Owner (PO), se exigido.
-- [ ] Validar a lista de responsáveis com a equipe.
-- [ ] Criar e vincular o quadro GitHub Projects com as 17 Issues e os campos de sprint/prioridade (ver `docs/GITHUB_PROJECTS_CONFIGURACAO.md`).
-- [x] Atribuir a Issue #1 ao analista de requisitos (`arthurfonsecadocarmo`).
-- [x] Distribuir as 17 Issues (#1–#17) entre os responsáveis principais, conforme `docs/PLANEJAMENTO_SPRINTS.md`.
-- [ ] Aprovar os requisitos do MVP e a documentação técnica.
+1. Planejar Issue, critérios de aceitação, prioridades e dependências.
+2. Cada pessoa trabalhar em branch própria e abrir PR para revisão antes de integrar à `main`.
+3. Revisões, testes, documentação e decisões de aceite devem ter registro verificável.
+4. Registrar no GitHub Projects andamento real e evidências de colaboração, sem inflar participação.
+5. Não utilizar ambiente local nem fazer deploy de produção, migrações ou despesas sem aprovação.
 
-**Referências:** [Issue #1 — Requisitos](https://github.com/Luscas-07/TeamTalk/issues/1) e [Issue #2 — Organização da equipe](https://github.com/Luscas-07/TeamTalk/issues/2).
+## Pendências
 
-> Este documento está em branch de trabalho e depende de revisão antes de integrar a `main`.
+- [x] Definir sete integrantes com papéis distintos.
+- [x] Definir PO (Breno) e Tech Lead (`Luscas-07`).
+- [x] Realocar responsabilidades das Issues existentes e abrir a Issue #19 de PO.
+- [ ] Receber usernames do GitHub de Julia e Rafael, confirmar acesso e atribuir Issues.
+- [ ] Nomear responsável ou acordo de colaboração para QA/DevOps.
+- [ ] Conferir inclusão da Issue #19 no GitHub Projects e atualizar as visões por pessoa e sprint.
+- [ ] Revisar e integrar a documentação por PR após aprovação.
+
+**Referências:** [Issue #2](https://github.com/Luscas-07/TeamTalk/issues/2) · [Planejamento](PLANEJAMENTO_SPRINTS.md) · [PR #18](https://github.com/Luscas-07/TeamTalk/pull/18).
+
+> Documento alterado na branch de documentação para revisão. Não representa merge na `main`.
