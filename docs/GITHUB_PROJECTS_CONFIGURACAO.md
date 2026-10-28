@@ -1,97 +1,89 @@
-# GitHub Projects — Configuração do quadro TeamTalk (Avaliação A3)
+# GitHub Projects — Gestão do Kanban TeamTalk (Avaliação A3)
 
-**Responsável:** @Luscas-07 — Tech Lead / Organização  
-**Issue de acompanhamento:** [#3 — GitHub Projects e Kanban](https://github.com/Luscas-07/TeamTalk/issues/3)  
-**Backlog a importar:** [#1–#17](https://github.com/Luscas-07/TeamTalk/issues) — 9 tarefas da Sprint 0, 4 da Sprint 1 e 4 da Sprint 2.  
-**Situação:** procedimento documentado; **quadro ainda não criado/verificado por esta integração**. O conector atual gerencia repositório e Issues, mas não possui ações específicas de criação/gestão do Projects.
+**Tech Lead/Responsável pelo quadro:** @Luscas-07  
+**Product Owner:** @BrennoOliveiraS (Breno)  
+**Issue de acompanhamento:** [#3](https://github.com/Luscas-07/TeamTalk/issues/3)  
+**Backlog:** [#1–#17 e #19](https://github.com/Luscas-07/TeamTalk/issues) — **18 Issues** (10 Sprint 0, 4 Sprint 1 e 4 Sprint 2). O número **#18 é um Pull Request**, não uma Issue de tarefa.
 
-## 1. Criar o projeto na interface online GitHub
+## 1. Estado do quadro — informação confirmada pela equipe
 
-1. Entre em [Projects do perfil Luscas-07](https://github.com/users/Luscas-07/projects) com a conta proprietária.
-2. Escolha **New project** e o modelo **Board** (ou crie em branco e mude o layout para Board).
-3. Título sugerido: **TeamTalk — A3 | Sprints 0, 1 e 2**.
-4. Defina o repositório padrão como `Luscas-07/TeamTalk`, quando a opção estiver disponível.
-5. Em [TeamTalk → Projects](https://github.com/Luscas-07/TeamTalk/projects), use **Link a project** para vinculá-lo ao repositório, se o link ainda não aparecer.
-6. Confirme que os colaboradores têm visibilidade do projeto e permissão necessária para atualizar tarefas; **acesso de escrita ao repositório não garante automaticamente o mesmo no Projects**.
-7. Escolha a visibilidade do projeto conforme as exigências da avaliação e a necessidade de privacidade. Não publique credenciais ou dados reais.
+O proprietário do repositório **criou um GitHub Project** com nome `TeamTalk — A3 | Sprints 0, 1 e 2`, em modelo Board. Uma captura de tela enviada pelo líder mostrou:
+- 17 Issues iniciais importadas do repositório TeamTalk;
+- três status iniciais `Todo (17)`, `In Progress (0)`, `Done (0)`;
+- responsáveis em cards, conforme atribuição daquela data;
+- projeto com cadeado (visibilidade privada).
 
-**Não crie projetos duplicados**: primeiro confira se um quadro TeamTalk já existe.
+**Não foi fornecido o URL completo do projeto** nem comprovada a configuração dos campos adicionais ou dos acessos para colaboradores. A [Issue #19 (PO)](https://github.com/Luscas-07/TeamTalk/issues/19) foi criada depois da captura; **não foi confirmada sua inclusão no Project**, então não considere o total 18 visível até verificá-lo.
 
-## 2. Campos recomendados
+**Não criar outro Project.** Utilizar o quadro que já existe.
 
-| Campo | Tipo | Valores iniciais / objetivo |
+## 2. Conferir e completar as configurações pela interface web GitHub
+
+1. Abra [seus Projects](https://github.com/users/Luscas-07/projects) e selecione `TeamTalk — A3 | Sprints 0, 1 e 2`.
+2. Copie o URL real (formato `https://github.com/users/Luscas-07/projects/NUMERO`) e adicione à [Issue #3](https://github.com/Luscas-07/TeamTalk/issues/3).
+3. Confira que o quadro está vinculado ao repositório na seção [TeamTalk → Projects](https://github.com/Luscas-07/TeamTalk/projects); caso necessário, use `Link a project`.
+4. Verifique se [Issue #19 — PO](https://github.com/Luscas-07/TeamTalk/issues/19) foi inserida automaticamente. Caso não, adicione como item do projeto (não crie uma nova Issue).
+5. Atualize os assignees, quando as contas Julia/Rafael forem confirmadas. No momento, #8 (Rafael), #13 e #17 (QA pendente) estão sem assignee.
+6. Na área de permissões do Project, conceda acesso aos integrantes autorizados. **Permissão Write no repositório não garante Write no Project.** Confirme também o acesso de Julia e Rafael após seus convites.
+7. Não altere visibilidade para pública sem considerar as necessidades acadêmicas e de privacidade.
+
+## 3. Campos recomendados
+
+| Campo | Tipo sugerido | Valores |
 | --- | --- | --- |
-| **Status** | Single select (ou campo padrão Status) | Backlog; Pronto; Em andamento; Em revisão; Em teste; Concluído |
+| **Status** | Campo padrão / Single select | Backlog; Pronto; Em andamento; Em revisão; Em teste; Concluído |
 | **Sprint** | Single select | Sprint 0; Sprint 1; Sprint 2 |
-| **Prioridade** | Single select | P0 (essencial/bloqueador); P1 (importante, pode ser sequenciado) |
-| **Assignee** | Campo padrão do GitHub | Conta real do responsável principal |
-| **Issue** | Item do projeto | Link para cada uma das 17 Issues do repositório |
+| **Prioridade** | Single select | P0; P1 |
+| **Assignee** | Campo padrão | Contas GitHub confirmadas |
+| **Issue** | Item real do GitHub Project | Vínculo à Issue de origem |
 
-Use **Sprint como Single select** até a equipe confirmar as datas das sprints. Um campo **Iteration** pode substituir o campo Sprint se forem aprovados ciclos com datas específicas.
+Se preferir conservar temporariamente as três colunas `Todo`, `In Progress` e `Done`, não há necessidade de renomeá-las antes da revisão da equipe. O importante é **status verdadeiro, sprint, prioridade e responsáveis verificáveis**. Mais tarde, adicione estados de revisão e testes para evidenciar o fluxo.
 
-## 3. Configurar visões
+Sem datas de sprint definidas, usar `Sprint` como Single select; se a equipe aprovar datas e ciclos, avaliar o campo `Iteration`.
 
-- **Kanban geral:** Board, agrupado pelo campo **Status**, com seis colunas.
-- **Sprint 0:** visão de Table ou Board filtrada por **Sprint 0**.
-- **Sprint 1:** visão filtrada por **Sprint 1**.
-- **Sprint 2:** visão filtrada por **Sprint 2**.
-- **Por responsável:** Table com campo Assignee; útil para comprovar a distribuição real da equipe.
-- **Backlog priorizado:** Table, agrupada ou ordenada pelo campo Prioridade.
+## 4. Visões para trabalho e apresentação
 
-Salve cada visão depois de ajustar filtros e layout; alterações não salvas podem não ficar visíveis aos colegas.
+- **Kanban geral:** Board, agrupado por Status.
+- **Sprint 0, 1, 2:** três visões filtradas pelo campo Sprint.
+- **Por integrante:** Table com Assignee para mostrar as responsabilidades.
+- **Priorização pelo PO:** Table ordenada por Prioridade e Sprint.
+- **Evidências:** em cada Issue/PR, comentários e links de commits, testes, diagramas e entregas, não registros fictícios.
 
-## 4. Adicionar as 17 Issues existentes
+## 5. Checklist do conteúdo
 
-**Opção rápida — pelo repositório:**
-
-1. Acesse [TeamTalk → Issues](https://github.com/Luscas-07/TeamTalk/issues).
-2. Selecione as **Issues #1 a #17** (podem ser marcadas em lote).
-3. No menu de ações da seleção, clique **Projects** e escolha **TeamTalk — A3 | Sprints 0, 1 e 2**.
-4. Abra o projeto e confira que foram adicionadas **17 Issues** (não apenas 17 drafts).
-5. Preencha os campos Sprint, Prioridade e Status conforme [PLANEJAMENTO_SPRINTS.md](PLANEJAMENTO_SPRINTS.md), começando todas as tarefas em **Backlog**.
-6. Revise os assignees; eles já constam das Issues no GitHub.
-
-**Alternativa:** no Project em Table, utilize **Add item from repository**, selecione TeamTalk e inclua as Issues #1–#17.
-
-**Importante:** o fluxo **Auto-add** apenas automatiza entradas futuras; não garante importação retroativa das 17 Issues existentes. Se habilitado, confirme filtros e limites do plano, sem contratar serviços extras.
-
-## 5. Matriz de conferência do quadro
-
-| Sprint | Issues esperadas | Quantidade |
+| Sprint | Issues | Quantidade |
 | --- | --- | --- |
-| Sprint 0 | #1, #2, #3, #4, #5, #6, #7, #8, #9 | 9 |
-| Sprint 1 | #10, #11, #12, #13 | 4 |
-| Sprint 2 | #14, #15, #16, #17 | 4 |
-| **Total** | **#1–#17** | **17** |
+| Sprint 0 | #1 a #9, #19 | 10 |
+| Sprint 1 | #10 a #13 | 4 |
+| Sprint 2 | #14 a #17 | 4 |
+| **Total** | **#1–#17 e #19** | **18** |
 
-Responsáveis já definidos:
-- @Luscas-07 — #2, #3, #8
-- @arthurfonsecadocarmo — #1, #4
-- @braga-felipee — #6, #12, #16
-- @alvessarthur — #7, #10, #11, #14, #15
-- @BrennoOliveiraS — #5, #9, #13, #17
+**Atribuições conforme última divisão:**
+- **Tech Lead** @Luscas-07: #2, #3, #5 (CI sob coordenação).
+- **PO Breno** @BrennoOliveiraS: #19 (priorização/aceite transversal).
+- **Requisitos/UML** @arthurfonsecadocarmo + Julia (GitHub pendente): #1, #4, #9.
+- **UI/UX Rafael** (GitHub pendente): #8.
+- **Frontend Felipe** @braga-felipee: #6, #12, #16.
+- **Backend Arthur dos Santos** @alvessarthur: #7, #10, #11, #14, #15.
+- **QA/DevOps a definir**: #13, #17 sem assignee.
 
-A sexta pessoa permanece sem tarefas até receber o convite e uma definição de responsabilidade; o PO ainda depende de decisão da equipe.
+## 6. Critérios de conclusão da Issue #3
 
-## 6. Evidências e critério para concluir a Issue #3
+- [x] Quadro GitHub Projects real criado pelo proprietário (evidência em captura de tela).
+- [x] As 17 Issues iniciais importadas e visíveis em `Todo`.
+- [ ] URL real do projeto e vínculo visível no repositório.
+- [ ] Issue #19 de PO adicionada/verificada (total esperado: 18).
+- [ ] Campos Sprint/Prioridade definidos e preenchidos nas 18 Issues.
+- [ ] Visões por sprint/responsável prontas e acessíveis ao grupo.
+- [ ] Acesso de escrita ao Project para os integrantes, incluindo Julia/Rafael quando convidados.
+- [ ] Registros de progresso real, revisão e evidências acadêmicas.
+- [ ] Validação final de PO e Tech Lead.
 
-- [ ] Projeto existente e vinculado ao repositório TeamTalk; link real inserido na Issue #3.
-- [ ] 17 Issues identificadas e adicionadas (9 / 4 / 4).
-- [ ] Status, Sprint, Prioridade e Assignee visíveis e corretos.
-- [ ] Visão Kanban com as seis colunas configurada.
-- [ ] Responsáveis conseguem atualizar suas tarefas.
-- [ ] Captura de tela / URL do Kanban anexadas à Issue como evidência para o professor.
-- [ ] Pelo menos uma movimentação real de tarefa de Backlog → Em andamento demonstrada (somente quando iniciada).
-- [ ] Revisão do Tech Lead registrada.
+**Não concluir a Issue #3 antes de verificar as pendências.** A integração GitHub usada nesta conversa continua sem operações específicas de GitHub Projects; o líder deverá concluir os ajustes pela interface web, 100% online.
 
-**Não marque a Issue #3 como concluída** até esses critérios estarem comprovados.
+## 7. Referências
 
-## 7. Links de referência do GitHub
-
-- [Guia de início rápido do Projects](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects)
-- [Adicionar Issues ao projeto](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project)
-- [Entendendo os campos](https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields)
+- [GitHub Projects — Guia rápido](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects)
+- [Adicionar itens ao projeto](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project)
+- [Entendendo campos](https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields)
 - [Vincular projeto ao repositório](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-your-project/adding-your-project-to-a-repository)
-- [Organizar visualização Kanban](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-board-layout)
-
-> Execução em nuvem exclusivamente. Nenhuma ação local, migração no Supabase, deploy Vercel ou recurso pago é necessária para configurar este quadro.
