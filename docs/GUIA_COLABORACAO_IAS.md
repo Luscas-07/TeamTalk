@@ -1,6 +1,6 @@
 # Guia de colaboração com IAs — TeamTalk
 
-**Versão:** 1.0 (proposta para revisão)  
+**Versão:** 1.1 (reorganização de papéis; proposta para revisão)  
 **Público:** os integrantes do TeamTalk e seus assistentes de IA (ChatGPT, Claude, Gemini, Cursor ou outros, conforme os recursos disponíveis).  
 **Repositório:** https://github.com/Luscas-07/TeamTalk  
 **Escopo:** desenvolvimento exclusivamente online, com GitHub, Supabase e Vercel.  
@@ -28,20 +28,23 @@
 - **Segurança:** não compartilhar segredos, tokens, credenciais, service role keys ou dados reais. Tabelas expostas do Supabase exigem RLS e testes de isolamento por organização e por participante.
 - **Rastreabilidade acadêmica:** Issues, PRs, commits, diagramas, testes, prints e quadro Kanban precisam conter evidências reais, sem simular o trabalho.
 - **GitHub Projects:** a equipe deve configurar e atualizar o quadro; se a IA não possuir operação para gerenciá-lo, deve solicitar ao integrante fazê-lo pela interface online e então registrar o link real.
-- **Mudanças de escopo:** somente depois de alinhamento com líder técnico e responsável pelos requisitos; PO formal ainda não atribuído.
-- **Padrão de review:** preferir um colega revisor além do autor, e o líder técnico na integração.
+- **Mudanças de escopo:** o PO Breno prioriza e valida requisitos; alterações técnicas também exigem alinhamento com Tech Lead e Requisitos.
+- **Padrão de review:** preferir um colega revisor além do autor, o Tech Lead na integração e o PO na validação funcional quando pertinente.
 
-## 3. Quem é responsável por qual entrega?
+## 3. Papéis oficiais (atualizados em 28/10/2026)
 
-| Integrante | Username | Issues da Sprint 0 | Sprint 1 | Sprint 2 |
-| --- | --- | --- | --- | --- |
-| Líder técnico + UX/UI | `Luscas-07` | [#2](https://github.com/Luscas-07/TeamTalk/issues/2), [#3](https://github.com/Luscas-07/TeamTalk/issues/3), [#8](https://github.com/Luscas-07/TeamTalk/issues/8) | Revisão e integração | Revisão e integração |
-| Analista de requisitos | `arthurfonsecadocarmo` | [#1](https://github.com/Luscas-07/TeamTalk/issues/1), [#4](https://github.com/Luscas-07/TeamTalk/issues/4) | Validação de regras de negócio | Validação de requisitos |
-| Frontend | `braga-felipee` | [#6](https://github.com/Luscas-07/TeamTalk/issues/6) | [#12](https://github.com/Luscas-07/TeamTalk/issues/12) | [#16](https://github.com/Luscas-07/TeamTalk/issues/16) |
-| Backend/BaaS | `alvessarthur` | [#7](https://github.com/Luscas-07/TeamTalk/issues/7) | [#10](https://github.com/Luscas-07/TeamTalk/issues/10), [#11](https://github.com/Luscas-07/TeamTalk/issues/11) | [#14](https://github.com/Luscas-07/TeamTalk/issues/14), [#15](https://github.com/Luscas-07/TeamTalk/issues/15) |
-| QA/DevOps | `BrennoOliveiraS` | [#5](https://github.com/Luscas-07/TeamTalk/issues/5), [#9](https://github.com/Luscas-07/TeamTalk/issues/9) | [#13](https://github.com/Luscas-07/TeamTalk/issues/13) | [#17](https://github.com/Luscas-07/TeamTalk/issues/17) |
+| Papel | Integrante | GitHub | Issues principais |
+| --- | --- | --- | --- |
+| Tech Lead | Líder do projeto | `Luscas-07` | #2, #3 e #5 (coordenação de CI) |
+| Product Owner | Breno Oliveira | `BrennoOliveiraS` | #19 e aceite/priorização das demais |
+| Requisitos e UML | Arthur Fonseca | `arthurfonsecadocarmo` | #1, #4 e #9 |
+| Requisitos e UML | Julia | **Username pendente** | #1, #4 e #9, junto a Arthur Fonseca |
+| UI/UX | Rafael | **Username pendente** | #8 (sem assignee técnico) |
+| Frontend | Felipe | `braga-felipee` | #6, #12 e #16 |
+| Backend/Banco | Arthur dos Santos | `alvessarthur` | #7, #10, #11, #14 e #15 |
+| QA/testes | **A definir na equipe** | Não atribuído | #13 e #17 |
 
-**Sexto integrante:** ainda não convidado/identificado; suas responsabilidades serão definidas posteriormente. Ninguém deve criar atribuições em nome de uma conta hipotética.
+**Importante:** Julia e Rafael já têm papéis definidos como pessoas, mas não foi informado o username GitHub de nenhum dos dois. **Não tentar inferir usuário.** O PO não assume automaticamente QA/DevOps e o Tech Lead apenas coordena a parte técnica de CI. A equipe possui sete integrantes.
 
 ## 4. Prompt inicial universal — copie e personalize
 
@@ -69,81 +72,97 @@ Se sua ferramenta não permitir executar uma ação, deixe isso explícito.
 
 ## 5. Instruções especializadas por integrante (complementar ao prompt universal)
 
-### Arthur Fonseca — Requisitos (`arthurfonsecadocarmo`)
+### Tech Lead — `Luscas-07`
 
-**Começar por:** [Issue #1](https://github.com/Luscas-07/TeamTalk/issues/1), depois [#4](https://github.com/Luscas-07/TeamTalk/issues/4).
+**Começar por:** #2, #3 e #5.
 
 ```text
-Atue como Analista de Requisitos do TeamTalk. Leia as Issues #1 e #4.
-Documente objetivo, perfis de usuário, requisitos funcionais e não funcionais
-numerados, regras de negócio, escopo do MVP e critérios de aceite.
-Produza UML de casos de uso em formato textual versionável e a representação
-necessária para o PDF de entrega; diferencie requisitos aprovados de propostas.
-Concentre Sprint 1 em acesso e Sprint 2 em mensagens individuais.
-Não assuma automaticamente o papel de PO; essa decisão aguarda a equipe.
-Trabalhe em branch docs/issue-1-requisitos (ou equivalente não existente)
-e abra PR com links das evidências para revisão.
+Atue como meu assistente de Tech Lead do TeamTalk. Minha função é coordenar
+arquitetura, revisão, integração e GitHub Projects, além do fluxo de PR/CI.
+Leia Issues #2, #3 e #5 e o AGENTS.md. Verifique dependências reais.
+O PO é Breno, então prioridades e aceite do produto dependem dele.
+Rafael assumiu UI/UX: protótipos e decisões visuais são responsabilidade dele.
+Não fazer merge na main nem alterar produção sem aprovação explícita.
+Trabalhe 100% online e mantenha links das evidências em Issues e PRs.
 ```
 
-### Felipe — Frontend (`braga-felipee`)
+### Breno — Product Owner `BrennoOliveiraS`
 
-**Começar por:** [Issue #6](https://github.com/Luscas-07/TeamTalk/issues/6), depois [#12](https://github.com/Luscas-07/TeamTalk/issues/12) e [#16](https://github.com/Luscas-07/TeamTalk/issues/16).
+**Começar por:** [Issue #19](https://github.com/Luscas-07/TeamTalk/issues/19).
 
 ```text
-Atue como Desenvolvedor Frontend do TeamTalk usando Next.js e TypeScript,
-com UX mobile-first e componentes reutilizáveis.
-Leia as Issues #6, #12 e #16 e valide dependências com o líder UX/UI.
-Na Sprint 0 prepare a estrutura da aplicação em branch própria no GitHub;
-na Sprint 1 implemente login, home e colegas; na Sprint 2, chat e histórico.
-Não invente APIs prontas, dados reais ou conexões Supabase não implementadas.
-Use estados de loading/erro/vazio, acessibilidade e layout para smartphone.
-Não alterar main nem publicar em produção. Abrir PR e registrar validações.
+Atue como meu assistente de Product Owner (PO) do TeamTalk.
+Meu GitHub é BrennoOliveiraS. Leia a Issue #19, o backlog e AGENTS.md.
+Ajude a priorizar RFs e RNFs do MVP, validar personas, visão do produto,
+objetivos das Sprints 1 e 2 e critérios de aceitação de cada entrega.
+Converse com Requisitos (Arthur Fonseca e Julia), Tech Lead e UX (Rafael).
+Registre feedback nas Issues e decisões de escopo de forma rastreável.
+Meu papel é PO, não QA/DevOps: não assuma testes técnicos nem deploy.
+Não altere main/produção nem crie recursos pagos.
 ```
 
-### Arthur dos Santos — Backend (`alvessarthur`)
+### Arthur Fonseca e Julia — Requisitos e UML
 
-**Começar por:** [Issue #7](https://github.com/Luscas-07/TeamTalk/issues/7), depois [#10](https://github.com/Luscas-07/TeamTalk/issues/10), [#11](https://github.com/Luscas-07/TeamTalk/issues/11), [#14](https://github.com/Luscas-07/TeamTalk/issues/14) e [#15](https://github.com/Luscas-07/TeamTalk/issues/15).
+**Começar por:** [#1](https://github.com/Luscas-07/TeamTalk/issues/1), [#4](https://github.com/Luscas-07/TeamTalk/issues/4), [#9](https://github.com/Luscas-07/TeamTalk/issues/9).
 
 ```text
-Atue como Desenvolvedor Backend/BaaS do TeamTalk.
-Leia Issues #7, #10, #11, #14 e #15 e a especificação de requisitos.
-Na Sprint 0 modele PostgreSQL, Supabase Auth, Realtime e matriz de permissões;
-entregue diagramas e proposta de migrações versionadas, sem aplicá-las ainda.
-Planeje RLS para isolamento entre organizações e participantes de conversas.
-Não use dados de usuário editáveis como base de autorização.
-NUNCA exponha service_role, secret keys ou credenciais no código.
-Não modifique banco de produção sem aprovação explícita do Tech Lead.
-Descreva testes positivos e negativos de acesso e abra PR para revisão.
+Atue como assistente da equipe de Requisitos/UML do TeamTalk.
+Arthur Fonseca (GitHub arthurfonsecadocarmo) e Julia dividem esta função.
+Leia Issues #1, #4 e #9, a especificação existente e o AGENTS.md.
+Documente requisitos funcionais/não funcionais numerados, regras de
+negócio, personas, escopo do MVP, critérios de aceite e casos de uso UML.
+PO Breno valida prioridades e aceite; não substitua as decisões dele.
+Julia ainda não tem username GitHub informado: não invente a conta dela.
+Faça documentação versionada por branch e PR, sem mexer na main.
 ```
 
-### Breno — QA e DevOps (`BrennoOliveiraS`)
+### Rafael — UI/UX Designer (username a confirmar)
 
-**Começar por:** [Issue #5](https://github.com/Luscas-07/TeamTalk/issues/5), depois [#9](https://github.com/Luscas-07/TeamTalk/issues/9), [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17).
+**Começar por:** [Issue #8](https://github.com/Luscas-07/TeamTalk/issues/8).
 
 ```text
-Atue como QA/DevOps do TeamTalk. Leia Issues #5, #9, #13 e #17.
-Na Sprint 0 defina fluxo PR/revisão, plano de CI do GitHub Actions,
-checklist de avaliação A3 e plano de testes.
-Quando existir a base Next.js, planeje/implemente verificações de lint,
-tipagem, build e testes em PRs. Trabalhe com Preview Vercel autorizado;
-não altere domínio ou ambiente de produção.
-Valide PWA e mobile na Sprint 1 e fluxo de dois usuários com histórico
-e isolamento de dados na Sprint 2.
-Registre resultados e evidências reais, não declare testes que não rodaram.
+Atue como assistente de UI/UX Designer do TeamTalk, com foco 100% mobile.
+Leia a Issue #8, requisitos aprovados, AGENTS.md e backlog.
+Crie fluxos e protótipos para login, lista de colaboradores e chat 1:1;
+defina identidade visual, componentes, responsividade, estados
+de carregamento/erro/vazio e critérios básicos de acessibilidade.
+Alinhe com Felipe (Frontend), Arthur Fonseca e Julia (Requisitos) e Breno (PO).
+Não confunda protótipo com aplicativo implementado.
+Meu username GitHub ainda precisa ser confirmado; não simule commits.
 ```
 
-### Líder técnico e UX/UI (`Luscas-07`)
+### Felipe — Frontend `braga-felipee`
 
-**Começar por:** [Issue #3](https://github.com/Luscas-07/TeamTalk/issues/3) e [#8](https://github.com/Luscas-07/TeamTalk/issues/8), apoiando [#2](https://github.com/Luscas-07/TeamTalk/issues/2).
+**Começar por:** #6, #12 e #16.
 
 ```text
-Atue como meu assistente de Tech Lead e UX/UI no TeamTalk.
-Use Issues #2, #3 e #8. Coordene o backlog com critérios de aceitação
-e entregas demonstráveis; não afirme criação do GitHub Projects sem confirmação.
-Proponha protótipos e fluxo mobile-first para login, colegas e chat.
-Revise PRs, integração, arquitetura e riscos de acesso, sem dar merge
-nem implantar em produção sem minha aprovação expressa.
-Cobrar evidências das Sprints 0, 1 e 2 e preservar colaboração da equipe.
+Atue como Desenvolvedor Frontend usando Next.js e TypeScript, em UX mobile-first.
+Leia as Issues #6, #12 e #16 e AGENTS.md. O responsável visual é Rafael.
+Alinhe os componentes e telas com protótipos aprovados, não invente telas.
+Aproveite branch própria e PR. Não exponha credenciais nem altere produção.
+```
+
+### Arthur dos Santos — Backend/Banco `alvessarthur`
+
+**Começar por:** #7, #10, #11, #14 e #15.
+
+```text
+Atue como desenvolvedor Backend/Banco do TeamTalk no Supabase.
+Leia #7, #10, #11, #14 e #15, os requisitos e AGENTS.md.
+Projete Auth, PostgreSQL, Realtime, políticas RLS e isolamento de tenants.
+Não use service_role no frontend ou dados editáveis de usuário para autorização.
+Versione migrações e só as aplique após aprovação técnica expressa.
+Colabore com Frontend, PO e Requisitos.
+```
+
+### QA e DevOps — atribuição pendente
+
+```text
+Não há QA/DevOps oficialmente designado nesta divisão.
+As Issues #13 e #17 estão abertas e sem assignee; #5 fica sob
+coordenação técnica do Tech Lead. A equipe deve indicar quem realizará
+testes, evidências, PWA e validação dos fluxos. O PO aprova funcionalidade
+mas não substitui testes técnicos independentes.
 ```
 
 ## 6. Modelo de relatório diário/ao concluir
@@ -177,7 +196,7 @@ Próximo responsável/revisor: ...
 - Exigir entregas identificáveis por pessoa e não apenas resultados genéricos gerados por IA.
 - Manter requisitos numerados, UML no repositório, CI documentada, quadro ágil e demonstração funcional como evidências.
 - Não criar features fora do MVP sem ajustar priorização e aprovação.
-- A sexta pessoa será integrada após o convite GitHub e uma nova atribuição validada.
+- A equipe já possui sete integrantes. Os usernames de Julia e Rafael devem ser informados antes de suas atribuições formais no GitHub.
 - Uma IA pode auxiliar qualquer papel **sem retirar a responsabilidade humana** pelo resultado e revisão.
 
 **Observação de escopo:** este guia descreve a forma de trabalho proposta. Não significa que aplicativos, CI, Kanban, testes ou ambientes já tenham sido implementados. Verificar sempre o estado atual dos serviços.
