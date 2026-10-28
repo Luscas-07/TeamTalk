@@ -22,7 +22,7 @@
 
 Cada integrante é responsável pela sua função principal, mas todos poderão ajudar os outros conforme a necessidade. O PO decide a ordem/valor das funcionalidades; o Tech Lead coordena as decisões técnicas; Requisitos e UX detalham experiências e regras; Frontend e Backend desenvolvem. Toda entrega deve ter evidência real.
 
-**Responsável por QA/DevOps:** não foi nomeado na nova distribuição. As atividades de testes, PWA e evidências de QA **continuam necessárias**, mas [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17) estão temporariamente sem assignee. O Tech Lead está coordenando a [#5](https://github.com/Luscas-07/TeamTalk/issues/5) (branches/CI). Isto não equivale a designar o PO como QA.
+**Política de QA/DevOps:** compartilhada por funcionalidade. Quem implementa testa e documenta resultados; outro colega revisa/testa quando aplicável. Felipe e Arthur dos Santos estão atribuídos às Issues #13 e #17 para execução técnica; Rafael valida UX, Arthur Fonseca e Julia validam requisitos, Breno (PO) dá aceite e o Tech Lead coordena CI/integração. Não existe função exclusiva de QA/DevOps.
 
 ## Backlog atualizado
 
@@ -32,13 +32,13 @@ Cada integrante é responsável pela sua função principal, mas todos poderão 
 - **Rafael:** [#8](https://github.com/Luscas-07/TeamTalk/issues/8) (atribuição GitHub pendente de username).
 - **Felipe:** [#6](https://github.com/Luscas-07/TeamTalk/issues/6), [#12](https://github.com/Luscas-07/TeamTalk/issues/12), [#16](https://github.com/Luscas-07/TeamTalk/issues/16).
 - **Arthur dos Santos:** [#7](https://github.com/Luscas-07/TeamTalk/issues/7), [#10](https://github.com/Luscas-07/TeamTalk/issues/10), [#11](https://github.com/Luscas-07/TeamTalk/issues/11), [#14](https://github.com/Luscas-07/TeamTalk/issues/14), [#15](https://github.com/Luscas-07/TeamTalk/issues/15).
-- **QA/DevOps:** [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17) — **responsável a definir**.
+- **QA/DevOps compartilhado:** [#13](https://github.com/Luscas-07/TeamTalk/issues/13) e [#17](https://github.com/Luscas-07/TeamTalk/issues/17) com Felipe (`braga-felipee`) e Arthur dos Santos (`alvessarthur`); #5 de CI coordenada pelo Tech Lead, demais integrantes em revisão e validação.
 
 ## Padrão de trabalho
 
 1. Planejar Issue, critérios de aceitação, prioridades e dependências.
 2. Cada pessoa trabalhar em branch própria e abrir PR para revisão antes de integrar à `main`.
-3. Revisões, testes, documentação e decisões de aceite devem ter registro verificável.
+3. Quem implementa executa testes aplicáveis e os documenta; outro integrante realiza revisão/teste cruzado; PO valida aceite e Tech Lead coordena CI/integração.
 4. Registrar no GitHub Projects andamento real e evidências de colaboração, sem inflar participação.
 5. Não utilizar ambiente local nem fazer deploy de produção, migrações ou despesas sem aprovação.
 
@@ -48,7 +48,7 @@ Cada integrante é responsável pela sua função principal, mas todos poderão 
 - [x] Definir PO (Breno) e Tech Lead (`Luscas-07`).
 - [x] Realocar responsabilidades das Issues existentes e abrir a Issue #19 de PO.
 - [ ] Receber usernames do GitHub de Julia e Rafael, confirmar acesso e atribuir Issues.
-- [ ] Nomear responsável ou acordo de colaboração para QA/DevOps.
+- [x] Aprovar e registrar execução distribuída de QA/DevOps por funcionalidade, com revisão cruzada e testes evidenciados.
 - [ ] Conferir inclusão da Issue #19 no GitHub Projects e atualizar as visões por pessoa e sprint.
 - [ ] Revisar e integrar a documentação por PR após aprovação.
 
