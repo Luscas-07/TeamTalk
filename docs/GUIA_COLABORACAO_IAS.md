@@ -22,7 +22,7 @@
 
 - **A Issue é o contrato de trabalho:** trabalhar primeiro nos critérios de aceitação, sem inventar requisitos extras.
 - **Um responsável principal por Issue:** colaboradores ajudam por comentários, revisão ou commits coordenados, evitando edições simultâneas sem acordo.
-- **Separação clara de artefatos:** especificação e UML são responsabilidade de Requisitos, design de UX/UI, componentes de Frontend, schema/RLS de Backend, testes e CI de QA/DevOps.
+- **Separação clara de artefatos:** Requisitos/UML, UX/UI, Frontend e Backend possuem responsáveis próprios. **QA/DevOps é transversal:** o responsável por cada implementação executa e registra testes, outro integrante revisa, e o Tech Lead coordena CI/integração.
 - **Nunca publicar diretamente na `main`:** criar branch `tipo/issue-N-descricao` e PR para revisão humana. Nunca executar merge ou deploy de produção sem autorização explícita do Tech Lead.
 - **Não alterar ambientes de produção nem contratar recursos pagos.** Infraestrutura cloud apenas.
 - **Segurança:** não compartilhar segredos, tokens, credenciais, service role keys ou dados reais. Tabelas expostas do Supabase exigem RLS e testes de isolamento por organização e por participante.
@@ -42,9 +42,9 @@
 | UI/UX | Rafael | **Username pendente** | #8 (sem assignee técnico) |
 | Frontend | Felipe | `braga-felipee` | #6, #12 e #16 |
 | Backend/Banco | Arthur dos Santos | `alvessarthur` | #7, #10, #11, #14 e #15 |
-| QA/testes | **A definir na equipe** | Não atribuído | #13 e #17 |
+| QA/DevOps distribuído | Toda a equipe conforme as funcionalidades | #13 e #17 com Felipe e Arthur dos Santos; revisão e aceite pelos demais |
 
-**Importante:** Julia e Rafael já têm papéis definidos como pessoas, mas não foi informado o username GitHub de nenhum dos dois. **Não tentar inferir usuário.** O PO não assume automaticamente QA/DevOps e o Tech Lead apenas coordena a parte técnica de CI. A equipe possui sete integrantes.
+**Importante:** Julia e Rafael já têm papéis definidos como pessoas, mas não foi informado o username GitHub de nenhum dos dois. **Não tentar inferir usuário.** O PO não assume automaticamente QA/DevOps e o Tech Lead coordena CI/integração; QA/DevOps é distribuído pelos responsáveis de cada feature. A equipe possui sete integrantes.
 
 ## 4. Prompt inicial universal — copie e personalize
 
@@ -155,14 +155,22 @@ Versione migrações e só as aplique após aprovação técnica expressa.
 Colabore com Frontend, PO e Requisitos.
 ```
 
-### QA e DevOps — atribuição pendente
+### QA e DevOps — responsabilidade compartilhada (aprovado)
+
+**Início:** #13 (Sprint 1), #17 (Sprint 2) e #5 (CI); cada feature também deve ter testes em sua própria Issue.
 
 ```text
-Não há QA/DevOps oficialmente designado nesta divisão.
-As Issues #13 e #17 estão abertas e sem assignee; #5 fica sob
-coordenação técnica do Tech Lead. A equipe deve indicar quem realizará
-testes, evidências, PWA e validação dos fluxos. O PO aprova funcionalidade
-mas não substitui testes técnicos independentes.
+Atue conforme a especialidade da pessoa responsável e o AGENTS.md.
+QA/DevOps está distribuído entre todos conforme novas funcionalidades
+forem implementadas. O autor da mudança executa testes relevantes
+e registra resultados e evidências; outro integrante revisa/testa.
+Felipe cuida de UI e PWA; Arthur dos Santos cuida de banco, Auth,
+segurança, RLS e Realtime; Rafael valida UX e acessibilidade;
+Arthur Fonseca e Julia conferem regras de negócio e casos de uso;
+o Tech Lead coordena CI, integração e revisão cruzada;
+Breno (PO) valida os critérios de aceitação sem substituir testes técnicos.
+Não declarar testes não executados, não dar merge automático na main
+e não aplicar migrações ou deploy de produção sem aprovação explícita.
 ```
 
 ## 6. Modelo de relatório diário/ao concluir
@@ -188,7 +196,7 @@ Próximo responsável/revisor: ...
 2. Outro colega realiza revisão técnica ou funcional quando pertinente.
 3. O líder técnico valida compatibilidade e riscos de integração.
 4. Só após autorização humana é permitida a integração na `main`.
-5. O responsável por QA registra testes; produção Vercel e banco Supabase exigem autorização específica.
+5. Os autores das funcionalidades registram testes e evidências; o revisor verifica sua cobertura, e o PO valida o aceite. Produção Vercel e banco Supabase exigem autorização específica.
 6. A Issue e o GitHub Projects só são marcados como concluídos quando as evidências correspondem ao estado real.
 
 ## 8. Regras para evitar retrabalho e proteger a nota A3
