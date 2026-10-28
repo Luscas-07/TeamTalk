@@ -45,9 +45,19 @@
 | Backend / Banco | Arthur dos Santos [@alvessarthur](https://github.com/alvessarthur) | #7, #10, #11, #14, #15 |
 | Requisitos e UML | Arthur Fonseca [@arthurfonsecadocarmo](https://github.com/arthurfonsecadocarmo) **e Julia (username pendente)** | #1, #4, #9 |
 | UX/UI | Rafael (**username pendente**) | #8 |
-| QA e testes | **A definir pela equipe** | #13, #17 (sem assignee até designação) |
+| QA/DevOps compartilhado | Equipe inteira, por funcionalidade | #13 e #17: @braga-felipee + @alvessarthur; #5: coordenação do Tech Lead |
 
-**Equipe:** sete pessoas. Não atribuir Julia ou Rafael no GitHub por nome presumido. O PO não substitui o papel de QA/DevOps; todos podem colaborar sem apagar responsabilidades. O GitHub Projects foi criado pelo líder com 17 Issues; a inclusão posterior da Issue #19 precisa ser verificada.
+**Equipe:** sete pessoas. Não atribuir Julia ou Rafael no GitHub por nome presumido. A equipe aprovou QA/DevOps compartilhado por funcionalidade: PO não substitui testes técnicos, e todos colaboram com responsabilidades rastreáveis. O GitHub Projects foi criado pelo líder com 17 Issues; a inclusão posterior da Issue #19 precisa ser verificada.
+
+## 4.1 Política aprovada de QA/DevOps distribuídos
+
+**Não há função exclusiva de QA/DevOps**. Sempre que uma funcionalidade for adicionada:
+1. O **autor da funcionalidade** implementa e executa os testes adequados (funcionais, unitários/integrados, segurança ou acessibilidade conforme o caso), registrando o que foi realmente executado na Issue/PR.
+2. **Outro integrante** realiza revisão e, quando possível, teste cruzado; o autor não aprova sozinho o próprio PR.
+3. **Frontend Felipe** valida UI, navegação mobile e PWA. **Backend Arthur dos Santos** valida Auth, banco, RLS e Realtime. As Issues #13 e #17 foram atribuídas a ambos para execução técnica compartilhada.
+4. **Arthur Fonseca e Julia** revisam regras/casos de uso, **Rafael** revisa usabilidade/acessibilidade, **Tech Lead** coordena integração/CI e **Breno PO** valida os critérios de aceite.
+5. O responsável pela alteração de workflows ou configuração cloud deve registrar testes, exigir revisão e obter **autorização específica antes de qualquer operação em produção**.
+6. QA/DevOps não é uma etapa dispensável: testes e evidências são critérios obrigatórios de conclusão da funcionalidade.
 
 ## 5. Sprints e definição de pronto
 
