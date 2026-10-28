@@ -23,7 +23,7 @@ O proprietário do repositório **criou um GitHub Project** com nome `TeamTalk �
 2. Copie o URL real (formato `https://github.com/users/Luscas-07/projects/NUMERO`) e adicione à [Issue #3](https://github.com/Luscas-07/TeamTalk/issues/3).
 3. Confira que o quadro está vinculado ao repositório na seção [TeamTalk → Projects](https://github.com/Luscas-07/TeamTalk/projects); caso necessário, use `Link a project`.
 4. Verifique se [Issue #19 — PO](https://github.com/Luscas-07/TeamTalk/issues/19) foi inserida automaticamente. Caso não, adicione como item do projeto (não crie uma nova Issue).
-5. Atualize os assignees, quando as contas Julia/Rafael forem confirmadas. No momento, #8 (Rafael), #13 e #17 (QA pendente) estão sem assignee.
+5. Atualize os assignees quando Julia/Rafael forem confirmados. Atualmente #8 (Rafael) aguarda username; **#13 e #17 estão atribuídas a Felipe e Arthur dos Santos** para QA técnico compartilhado.
 6. Na área de permissões do Project, conceda acesso aos integrantes autorizados. **Permissão Write no repositório não garante Write no Project.** Confirme também o acesso de Julia e Rafael após seus convites.
 7. Não altere visibilidade para pública sem considerar as necessidades acadêmicas e de privacidade.
 
@@ -65,7 +65,7 @@ Sem datas de sprint definidas, usar `Sprint` como Single select; se a equipe apr
 - **UI/UX Rafael** (GitHub pendente): #8.
 - **Frontend Felipe** @braga-felipee: #6, #12, #16.
 - **Backend Arthur dos Santos** @alvessarthur: #7, #10, #11, #14, #15.
-- **QA/DevOps a definir**: #13, #17 sem assignee.
+- **QA/DevOps distribuído:** #13 e #17 com @braga-felipee e @alvessarthur; todos contribuem com revisão/testes por funcionalidade, Tech Lead coordena CI e PO valida aceite.
 
 ## 6. Critérios de conclusão da Issue #3
 
@@ -74,7 +74,7 @@ Sem datas de sprint definidas, usar `Sprint` como Single select; se a equipe apr
 - [ ] URL real do projeto e vínculo visível no repositório.
 - [ ] Issue #19 de PO adicionada/verificada (total esperado: 18).
 - [ ] Campos Sprint/Prioridade definidos e preenchidos nas 18 Issues.
-- [ ] Visões por sprint/responsável prontas e acessíveis ao grupo.
+- [ ] Visões por sprint/responsável prontas e acessíveis ao grupo, incluindo múltiplos assignees em #13 e #17.
 - [ ] Acesso de escrita ao Project para os integrantes, incluindo Julia/Rafael quando convidados.
 - [ ] Registros de progresso real, revisão e evidências acadêmicas.
 - [ ] Validação final de PO e Tech Lead.
