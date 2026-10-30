@@ -59,6 +59,18 @@
 5. O responsável pela alteração de workflows ou configuração cloud deve registrar testes, exigir revisão e obter **autorização específica antes de qualquer operação em produção**.
 6. QA/DevOps não é uma etapa dispensável: testes e evidências são critérios obrigatórios de conclusão da funcionalidade.
 
+
+## 4.2 Classificação visual de novas Issues
+
+O GitHub Projects usa labels de área para identificar a função relacionada ao card:
+`area:tech-lead`, `area:produto`, `area:requisitos`, `area:ux-ui`, `area:frontend`, `area:backend` e `area:qualidade`.
+
+**Toda Issue nova deve receber a label da área principal**, mesmo quando mais de um integrante colaborar; assignees representam pessoas, não substituem a classificação por área. Prefira uma label por Issue, evitando excesso visual.
+
+**Sprint**, **Prioridade** e **Status** pertencem aos respectivos campos do GitHub Projects e não devem ser representados por novas labels redundantes. A classificação das 18 Issues atuais foi aplicada no GitHub; a cor e a exibição das labels no Board são ajustes de visualização ainda dependentes da interface.
+
+Consulte [a matriz de labels e cores sugeridas](docs/GITHUB_PROJECTS_CONFIGURACAO.md#8-identificação-visual-dos-cards--labels-por-área-30102026).
+
 ## 5. Sprints e definição de pronto
 
 - **Sprint 0 — preparação:** requisitos, UML, UX, arquitetura, GitHub Projects, CI e documentação.
