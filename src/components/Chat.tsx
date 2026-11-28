@@ -11,6 +11,8 @@ type Message = {
 
 type ChatProps = {
   contactName?: string;
+  isLoading?: boolean;
+  error?: string | null;
 };
 
 const conversations = [
@@ -38,7 +40,11 @@ const initialMessages: Record<number, Message[]> = {
   ],
 };
 
-export default function Chat({ contactName }: ChatProps) {
+export default function Chat({
+  contactName,
+  isLoading = false,
+  error = null,
+}: ChatProps) {
   const chatList = contactName
     ? [
         ...conversations,
@@ -142,36 +148,44 @@ export default function Chat({ contactName }: ChatProps) {
         </label>
 
         <div className="conversation-list">
-          {filtered.map((item) => {
-            const index = chatList.indexOf(item);
-
-            return (
-              <button
-                key={item.name}
-                className={`conversation ${selected === index ? "active" : ""}`}
-                onClick={() => openConversation(index)}
-              >
-                <div className={`avatar avatar-${item.color}`}>
-                  {item.initials}
-                </div>
-
-                <div className="conversation-copy">
-                  <strong>{item.name}</strong>
-                  <span>
-                    {messagesByConversation[index]?.slice(-1)[0]?.text || item.message}
-                  </span>
-                </div>
-
-                <div className="conversation-meta">
-                  <span>{item.time}</span>
-                  {item.unread > 0 && <b>{item.unread}</b>}
-                </div>
-              </button>
-            );
-          })}
-
-          {filtered.length === 0 && (
+          {isLoading ? (
+            <p className="empty-search">Carregando conversas...</p>
+          ) : error ? (
+            <p className="empty-search">
+              Não foi possível carregar as conversas: {error}
+            </p>
+          ) : chatList.length === 0 ? (
+            <p className="empty-search">Você ainda não possui conversas.</p>
+          ) : filtered.length === 0 ? (
             <p className="empty-search">Nenhuma conversa encontrada.</p>
+          ) : (
+            filtered.map((item) => {
+              const index = chatList.indexOf(item);
+
+              return (
+                <button
+                  key={item.name}
+                  className={`conversation ${selected === index ? "active" : ""}`}
+                  onClick={() => openConversation(index)}
+                >
+                  <div className={`avatar avatar-${item.color}`}>
+                    {item.initials}
+                  </div>
+
+                  <div className="conversation-copy">
+                    <strong>{item.name}</strong>
+                    <span>
+                      {messagesByConversation[index]?.slice(-1)[0]?.text || item.message}
+                    </span>
+                  </div>
+
+                  <div className="conversation-meta">
+                    <span>{item.time}</span>
+                    {item.unread > 0 && <b>{item.unread}</b>}
+                  </div>
+                </button>
+              );
+            })
           )}
         </div>
 
@@ -210,20 +224,26 @@ export default function Chat({ contactName }: ChatProps) {
             Esta é uma demonstração. As mensagens ainda não estão conectadas ao servidor.
           </div>
 
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`message-row ${message.sent ? "sent" : "received"}`}
-            >
-              <div className="message-bubble">
-                <p>{message.text}</p>
-                <span>{message.time}</span>
-              </div>
-            </div>
-          ))}
-
-          {messages.length === 0 && (
+          {isLoading ? (
+            <p className="no-messages">Carregando mensagens...</p>
+          ) : error ? (
+            <p className="no-messages">
+              Não foi possível carregar as mensagens: {error}
+            </p>
+          ) : messages.length === 0 ? (
             <p className="no-messages">Nenhuma mensagem nesta conversa.</p>
+          ) : (
+            messages.map((message, index) => (
+              <div
+                key={index}
+                className={`message-row ${message.sent ? "sent" : "received"}`}
+              >
+                <div className="message-bubble">
+                  <p>{message.text}</p>
+                  <span>{message.time}</span>
+                </div>
+              </div>
+            ))
           )}
         </div>
 
@@ -232,8 +252,13 @@ export default function Chat({ contactName }: ChatProps) {
             value={draft}
             onChange={(event) => setDraft(event.target.value)}
             placeholder="Escreva uma mensagem..."
+            disabled={isLoading || !!error}
           />
-          <button type="submit" aria-label="Enviar mensagem">
+          <button
+            type="submit"
+            aria-label="Enviar mensagem"
+            disabled={isLoading || !!error}
+          >
             ➤
           </button>
         </form>

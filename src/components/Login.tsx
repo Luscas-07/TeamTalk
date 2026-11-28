@@ -1,7 +1,7 @@
-
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { supabase } from "@/lib/supabase";
 
 type LoginProps = {
   onLogin: () => void;
@@ -10,16 +10,37 @@ type LoginProps = {
 export default function Login({ onLogin }: LoginProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setError("");
 
     if (!email.trim() || !password.trim()) {
-      alert("Preencha o e-mail e a senha.");
+      setError("Preencha o e-mail e a senha.");
       return;
     }
 
-    onLogin();
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password,
+      });
+
+      if (error || !data.session) {
+        setError("Não foi possível entrar. Verifique suas credenciais.");
+        return;
+      }
+
+      onLogin();
+    } catch {
+      setError("Erro de conexão. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -48,7 +69,11 @@ export default function Login({ onLogin }: LoginProps) {
           required
         />
 
-        <button type="submit">Entrar</button>
+        {error && <p role="alert" style={{ color: "red" }}>{error}</p>}
+
+        <button type="submit" disabled={loading}>
+          {loading ? "Entrando..." : "Entrar"}
+        </button>
       </form>
     </main>
   );

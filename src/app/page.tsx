@@ -1,7 +1,8 @@
-
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import type { Session } from "@supabase/supabase-js";
+import { supabase } from "@/lib/supabase";
 import Chat from "@/components/Chat";
 import Login from "@/components/Login";
 import Colleagues from "@/components/Colleagues";
@@ -10,23 +11,50 @@ import Profile from "@/components/Profile";
 type Screen = "chat" | "colleagues" | "profile";
 
 export default function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [session, setSession] = useState<Session | null>(null);
+  const [loading, setLoading] = useState(true);
   const [activeScreen, setActiveScreen] = useState<Screen>("chat");
   const [selectedContact, setSelectedContact] = useState<string | null>(null);
 
-  if (!isLoggedIn) {
-    return <Login onLogin={() => setIsLoggedIn(true)} />;
-  }
+  useEffect(() => {
+    const { data: { subscription } } =
+      supabase.auth.onAuthStateChange((_event, session) => {
+        setSession(session);
+        setLoading(false);
+
+        if (!session) {
+          setActiveScreen("chat");
+          setSelectedContact(null);
+        }
+      });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   function openColleagueChat(name: string) {
     setSelectedContact(name);
     setActiveScreen("chat");
   }
 
-  function logout() {
-    setIsLoggedIn(false);
+  async function logout() {
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      alert("Não foi possível sair da conta.");
+      return;
+    }
+
+    setSession(null);
     setActiveScreen("chat");
     setSelectedContact(null);
+  }
+
+  if (loading) {
+    return <main>Carregando...</main>;
+  }
+
+  if (!session) {
+    return <Login onLogin={() => {}} />;
   }
 
   return (
